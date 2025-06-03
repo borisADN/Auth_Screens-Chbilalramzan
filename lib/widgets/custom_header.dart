@@ -6,12 +6,12 @@ class CustomHeader extends StatelessWidget {
   final String text;
   final Function()? onTap;
   const CustomHeader({Key? key, required this.text, required this.onTap})
-      : super(key: key);
+    : super(key: key);
 
   @override
   Widget build(BuildContext context) {
     return Container(
-      margin: const EdgeInsets.only(top: 16, left: 16),
+      margin: const EdgeInsets.only(top: 50, left: 16),
       child: Row(
         mainAxisAlignment: MainAxisAlignment.start,
         crossAxisAlignment: CrossAxisAlignment.center,
@@ -24,13 +24,8 @@ class CustomHeader extends StatelessWidget {
               size: 24,
             ),
           ),
-          const SizedBox(
-            width: 16,
-          ),
-          Text(
-            text,
-            style: KTextStyle.headerTextStyle,
-          )
+          const SizedBox(width: 16),
+          Text(text, style: KTextStyle.headerTextStyle),
         ],
       ),
     );
